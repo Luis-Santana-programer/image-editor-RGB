@@ -119,6 +119,8 @@ function setup() {
         blackandwhite(uploadedimage.pixels);
     }else if (presetSelect.val() === '8-bits'){
         bits(uploadedimage.pixels);
+    }else if(presetSelect.val() === 'sc'){
+        singlecolor(uploadedimage.pixels);
     }
     uploadedimage.updatePixels();
 
@@ -135,11 +137,13 @@ function setup() {
 
   ColorBox.click(function(){
       selectingcolor=true;
+      $('body').addClass('picking-color');
   });
 
   function mouseClicked(){
       if(MouseinCanvas()){
           selectingcolor=false;
+          $('body').removeClass('picking-color');
         }
   }
 

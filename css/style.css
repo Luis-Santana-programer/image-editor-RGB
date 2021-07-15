@@ -12,6 +12,10 @@ h1{
 body{
     display: flex;
 }
+
+.picking-color{
+    cursor: url(../assets/cursor.cur), pointer;
+}
 .panel{
     height: 100vh;
     width: 50vw;
